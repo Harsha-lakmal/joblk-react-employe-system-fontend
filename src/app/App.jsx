@@ -1,18 +1,13 @@
 import React, { useEffect } from 'react';
-import {
-  Routes,
-  Route,
-  useLocation
-} from 'react-router-dom';
+import {Routes,Route, useLocation} from 'react-router-dom';
+import '../css/style.css'
+import HomePage from '../pages/HomePage/HomePage.jsx'
+import './App.css'
+import AboutPage from '../pages/AboutPage/AboutPage.jsx';
 
-import './css/style.css';
-
-
-// Import pages
-import Dashboard from './pages/Dashboard';
 
 function App() {
-
+ 
   const location = useLocation();
 
   useEffect(() => {
@@ -23,9 +18,21 @@ function App() {
 
   return (
     <>
+
       <Routes>
-        <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/home" element={<HomePage />} />
+        <Route path='/about' element={<AboutPage/>}/>
       </Routes>
+
+
+
+    
+    {/* <div>
+      <AboutPage/>
+      <Dashboard/>
+    </div> */}
+
+
     </>
   );
 }
