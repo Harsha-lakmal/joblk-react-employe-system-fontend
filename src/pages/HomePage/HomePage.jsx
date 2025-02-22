@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-
+import Banner from '../../comon/Banner/Banner';
 import Sidebar from '../../partials/Sidebar';
 import Header from '../../partials/Header';
 import FilterButton from '../../components/DropdownFilter';
 import Datepicker from '../../components/Datepicker';
-import DashboardCard06 from '../../partials/dashboard/DashboardCard06';
+import DashboardCard06 from '../../partials/Card/jobCard';
 
 
 function HomePage() {
@@ -56,12 +56,14 @@ function HomePage() {
 
               <DashboardCard06/>
               
+              
             </div>
 
           </div>
         </main>
 
-        
+        <Banner/>
+
 
       </div>
     </div>
