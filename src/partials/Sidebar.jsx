@@ -98,8 +98,8 @@ function Sidebar({
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
-                          
-                            <img src={imgHome} alt="home-icon" width={'20px'} height={'20px'} />
+                          <img src={imgHome} alt="home-icon" width={'20px'} height={'20px'} />
+
                             <span className="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                             <li className="mb-1 last:mb-0">
                             <NavLink

@@ -5,6 +5,7 @@ import Notifications from '../components/DropdownNotifications';
 import Help from '../components/DropdownHelp';
 import UserMenu from '../components/DropdownProfile';
 import ThemeToggle from '../components/ThemeToggle';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header({
   sidebarOpen,
@@ -12,7 +13,15 @@ function Header({
   variant = 'default',
 }) {
 
-  const [searchModalOpen, setSearchModalOpen] = useState(false)
+  const [searchModalOpen, setSearchModalOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Track authentication status
+  const navigate = useNavigate();
+
+  // Mock logout function
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    navigate('/login');
+  };
 
   return (
     <header className={`sticky top-0 before:absolute before:inset-0 before:backdrop-blur-md max-lg:before:bg-white/90 dark:max-lg:before:bg-gray-800/90 before:-z-10 z-30 ${variant === 'v2' || variant === 'v3' ? 'before:bg-white after:absolute after:h-px after:inset-x-0 after:top-full after:bg-gray-200 dark:after:bg-gray-700/60 after:-z-10' : 'max-lg:shadow-xs lg:before:bg-gray-100/90 dark:lg:before:bg-gray-900/90'} ${variant === 'v2' ? 'dark:before:bg-gray-800' : ''} ${variant === 'v3' ? 'dark:before:bg-gray-900' : ''}`}>
@@ -21,8 +30,6 @@ function Header({
 
           {/* Header: Left side */}
           <div className="flex">
-
-
             <button
               className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 lg:hidden"
               aria-controls="sidebar"
@@ -36,7 +43,6 @@ function Header({
                 <rect x="4" y="17" width="16" height="2" />
               </svg>
             </button>
-
           </div>
 
           {/* Header: Right side */}
@@ -64,12 +70,28 @@ function Header({
             <Notifications align="right" />
             <Help align="right" />
             <ThemeToggle />
-            {/*  Divider */}
             <hr className="w-px h-6 bg-gray-200 dark:bg-gray-700/60 border-none" />
-            <UserMenu align="right" />
 
+            {isAuthenticated ? (
+              <UserMenu align="right" onLogout={handleLogout} />
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Link
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-150 ease-in-out"
+                  to="/login"
+                  onClick={() => setIsAuthenticated(true)} // Mock login
+                >
+                  Sign In
+                </Link>
+                <Link
+                  className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-150 ease-in-out"
+                  to="/signup"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
           </div>
-
         </div>
       </div>
     </header>

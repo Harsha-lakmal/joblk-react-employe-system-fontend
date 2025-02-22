@@ -5,6 +5,7 @@ import Header from '../../partials/Header';
 import FilterButton from '../../components/DropdownFilter';
 import Datepicker from '../../components/Datepicker';
 import DashboardCard06 from '../../partials/Card/jobCard';
+import Banner from '../../comon/Banner/Banner';
 
 
 function CoursePage() {
@@ -25,6 +26,7 @@ function CoursePage() {
 
         <main className="grow">
          <h1>Course Page load</h1>
+         <Banner/>
         </main>
 
         

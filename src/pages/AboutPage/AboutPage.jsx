@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-
+import Banner from '../../comon/Banner/Banner';
 import Sidebar from '../../partials/Sidebar';
 import Header from '../../partials/Header';
-import FilterButton from '../../components/DropdownFilter';
-import Datepicker from '../../components/Datepicker';
-
 
 function AboutPage() {
 
@@ -21,7 +18,12 @@ function AboutPage() {
 
         {/*  Site header */}
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-            <h1>About Page on Laod</h1>
+
+
+            <Banner/>
+
+
+
       </div>
     </div>
   );

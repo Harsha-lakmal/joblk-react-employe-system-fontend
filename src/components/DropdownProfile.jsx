@@ -78,15 +78,7 @@ function DropdownProfile({
                 to="/settings"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                {/* <NavLink
-                  end
-                  to="/home"
-                  className={({ isActive }) =>
-                    "block transition duration-150 truncate " + (isActive ? "text-violet-500" : "text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200")
-                  }
-                >
-                 Setting
-                </NavLink> */}
+              
                 Setting 
               </Link>
             </li>
@@ -96,8 +88,9 @@ function DropdownProfile({
                 to="/login"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                Login Out
+                Sign Out
               </Link>
+           
             </li>
           </ul>
         </div>

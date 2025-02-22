@@ -9,6 +9,7 @@ import CoursePage from '../pages/CoursePage/CoursePage.jsx';
 import SignPage from '../pages/SignPage/SignPage.jsx';
 import LoginPage from '../pages/LoginPage/LoginPage.jsx';
 import SettingPage from '../pages/SettingPage/SettingPage.jsx';
+import Profile from '../Profile/Profile.jsx';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route  path="/*" element={<LoginPage />} />
         <Route exact path="/home" element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
@@ -33,7 +34,9 @@ function App() {
         <Route path='/login' element={<LoginPage />} />
         <Route path='/settings' element={<SettingPage />} />
 
-      </Routes>
+      </Routes> */}
+
+      <Profile/>
     </>
   );
 }

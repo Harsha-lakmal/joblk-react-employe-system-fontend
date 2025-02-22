@@ -5,6 +5,7 @@ import Header from '../../partials/Header';
 import FilterButton from '../../components/DropdownFilter';
 import Datepicker from '../../components/Datepicker';
 import DashboardCard06 from '../../partials/Card/jobCard';
+import Banner from '../../comon/Banner/Banner';
 
 
 function JobPage() {
@@ -25,6 +26,8 @@ function JobPage() {
 
         <main className="grow">
          <h1>Job page load  </h1>
+         <Banner/>
+         
         </main>
 
         
