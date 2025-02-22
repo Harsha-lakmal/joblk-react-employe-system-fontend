@@ -8,6 +8,7 @@ import JobPage from '../pages/JobPage/JobPage.jsx';
 import CoursePage from '../pages/CoursePage/CoursePage.jsx';
 import SignPage from '../pages/SignPage/SignPage.jsx';
 import LoginPage from '../pages/LoginPage/LoginPage.jsx';
+import SettingPage from '../pages/SettingPage/SettingPage.jsx';
 
 
 function App() {
@@ -23,13 +24,15 @@ function App() {
   return (
     <>
       <Routes>
-        <Route  path="/*" element={<HomePage />} />
+        <Route  path="/*" element={<LoginPage />} />
         <Route exact path="/home" element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/job' element={<JobPage />} />
         <Route path='/course' element={<CoursePage />} />
         <Route path='/sign' element={<SignPage />} />
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/settings' element={<SettingPage />} />
+
       </Routes>
     </>
   );

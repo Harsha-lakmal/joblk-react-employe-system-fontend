@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Transition from '../utils/Transition';
 
 import UserAvatar from '../assets/joblk.png';
@@ -78,16 +78,25 @@ function DropdownProfile({
                 to="/settings"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                Settings
+                {/* <NavLink
+                  end
+                  to="/home"
+                  className={({ isActive }) =>
+                    "block transition duration-150 truncate " + (isActive ? "text-violet-500" : "text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200")
+                  }
+                >
+                 Setting
+                </NavLink> */}
+                Setting 
               </Link>
             </li>
             <li>
               <Link
                 className="font-medium text-sm text-violet-500 hover:text-violet-600 dark:hover:text-violet-400 flex items-center py-1 px-3"
-                to="/signin"
+                to="/login"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                Sign Out
+                Login Out
               </Link>
             </li>
           </ul>
