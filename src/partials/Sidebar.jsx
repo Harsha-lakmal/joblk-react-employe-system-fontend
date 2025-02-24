@@ -64,9 +64,10 @@ function Sidebar({
       >
        
         <div className="flex justify-between mb-10 pr-3 sm:px-2">
-          <NavLink end to="/" className="block">
-       <img src={img} alt="logoLkJob" width={'50px'} height={'50px'} style={{borderRadius:'20px'}}/>
-          </NavLink>
+          {/* <NavLink end to="/" className="block">
+          </NavLink> */}
+          <img src={img} alt="logoLkJob" width={'50px'} height={'50px'} style={{borderRadius:'20px'}}/>
+
         </div>
 
         {/* Links */}

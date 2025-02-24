@@ -5,6 +5,8 @@ import {
     FormControl, OutlinedInput, ThemeProvider, CssBaseline
 } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
+import { NavLink, useNavigate } from 'react-router-dom';
+
 
 const darkTheme = createTheme({
     palette: {
@@ -21,6 +23,8 @@ export default function LoginPage() {
     const [password, setPassword] = useState('');
     const [role, setRole] = useState('');
     const [tandc, setTandc] = useState(false);
+    const navigate = useNavigate();
+
 
     const handleLogin = () => {
         if (!email || !password || !role) {
@@ -32,6 +36,8 @@ export default function LoginPage() {
 
     const handleSignUp = () => {
         console.log('Sign Up button clicked');
+        navigate('/sign');
+
     };
 
     return (
@@ -82,7 +88,7 @@ export default function LoginPage() {
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
-
+{/* 
                     <FormControl fullWidth>
                         <InputLabel>Role</InputLabel>
                         <Select
@@ -94,7 +100,7 @@ export default function LoginPage() {
                                 <MenuItem key={role} value={role}>{role}</MenuItem>
                             ))}
                         </Select>
-                    </FormControl>
+                    </FormControl> */}
 
                     <FormControlLabel
                         control={<Checkbox checked={tandc} onChange={(e) => setTandc(e.target.checked)} />}

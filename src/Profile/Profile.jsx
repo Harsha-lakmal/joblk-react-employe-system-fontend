@@ -1,85 +1,91 @@
-import React from "react";
-import JobIcon  from '../assets/joblk.png'
-
-const Profile = () => {
+import React from 'react';
+import './stlye.css'
+import imgpf  from '../assets/joblk.png'
+const UserProfileForm = () => {
   return (
-    <div
-      style={{
-        maxWidth: "400px",
-        margin: "40px auto",
-        backgroundColor: "white",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        borderRadius: "16px",
-        overflow: "hidden",
-      }}
-    >
-      <img
-        style={{ width: "100%", height: "200px", objectFit: "cover" }}
-        src="https://via.placeholder.com/400"
-        alt="Profile Background"
-      />
-      <div style={{ padding: "24px", textAlign: "center" }}>
-        <img
-          style={{
-            width: "96px",
-            height: "96px",
-            borderRadius: "50%",
-            marginTop: "-48px",
-            border: "4px solid white",
-          }}
-          src={JobIcon}
-          alt="Profile Avatar"
-        />
-        <h2 style={{ fontSize: "24px", fontWeight: "600", marginTop: "16px" }}>
-          John Doe
-        </h2>
-        <p style={{ color: "#6B7280" }}>Software Developer</p>
-        <p style={{ color: "#4B5563", marginTop: "16px" }}>
-          Passionate developer with experience in React and modern web
-          technologies. Loves to create beautiful UIs and interactive
-          experiences.
-        </p>
-        <div style={{ marginTop: "24px", display: "flex", justifyContent: "center", gap: "16px" }}>
-          <a
-            href="#"
-            style={{
-              color: "#3B82F6",
-              textDecoration: "none",
-              transition: "color 0.2s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#2563EB")}
-            onMouseLeave={(e) => (e.target.style.color = "#3B82F6")}
-          >
-            LinkedIn
-          </a>
-          <a
-            href="#"
-            style={{
-              color: "#3B82F6",
-              textDecoration: "none",
-              transition: "color 0.2s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#2563EB")}
-            onMouseLeave={(e) => (e.target.style.color = "#3B82F6")}
-          >
-            GitHub
-          </a>
-          <a
-            href="#"
-            style={{
-              color: "#3B82F6",
-              textDecoration: "none",
-              transition: "color 0.2s",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#2563EB")}
-            onMouseLeave={(e) => (e.target.style.color = "#3B82F6")}
-          >
-            Twitter
-          </a>
+    <div className="container">
+      <div className="form-section">
+        <div className="form-header">
+          <h2>General Information</h2>
+          <button className="btn new-btn">+ New</button>
         </div>
+        <form className="form-grid">
+          <div className="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Enter your first name" />
+          </div>
+          <div className="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Also your last name" />
+          </div>
+          <div className="form-group">
+            <label>Birthday</label>
+            <input type="date" placeholder="mm/dd/yyyy" />
+          </div>
+          <div className="form-group">
+            <label>Gender</label>
+            <select>
+              <option value="">Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="name@company.com" />
+          </div>
+          <div className="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="+12-345-678-910" />
+          </div>
+          <div className="form-group">
+            <label>Address</label>
+            <input type="text" placeholder="Enter your home address" />
+          </div>
+          <div className="form-group">
+            <label>Number</label>
+            <input type="text" placeholder="No." />
+          </div>
+          <div className="form-group">
+            <label>City</label>
+            <input type="text" placeholder="City" />
+          </div>
+          <div className="form-group">
+            <label>State</label>
+            <select>
+              <option value="">State</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label>ZIP</label>
+            <input type="text" placeholder="ZIP" />
+          </div>
+          <button className="btn save-btn">Save All</button>
+        </form>
+      </div>
+
+      <div className="profile-card">
+        <div className="profile-image">
+          <img src={imgpf} alt="Profile" />
+        </div>
+        <br />
+        <br />
+
+        <h3>Neil Sims</h3>
+        <br />
+        <br />
+
+        <p>Senior Software Engineer</p>
+        <br />
+        <br />
+
+        <p>New York, USA</p>
+       
+       
       </div>
     </div>
   );
 };
 
-export default Profile;
+export default UserProfileForm;

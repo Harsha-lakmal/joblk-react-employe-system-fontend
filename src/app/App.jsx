@@ -20,23 +20,24 @@ function App() {
     document.querySelector('html').style.scrollBehavior = 'auto'
     window.scroll({ top: 0 })
     document.querySelector('html').style.scrollBehavior = ''
-  }, [location.pathname]); // triggered on route change
+  }, [location.pathname]); 
 
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route  path="/*" element={<LoginPage />} />
         <Route exact path="/home" element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/job' element={<JobPage />} />
         <Route path='/course' element={<CoursePage />} />
         <Route path='/sign' element={<SignPage />} />
-        <Route path='/login' element={<LoginPage />} />
+        <Route path='/signup' element={<LoginPage />} />
         <Route path='/settings' element={<SettingPage />} />
 
-      </Routes> */}
+      </Routes>
 
-      <Profile/>
+
+  
     </>
   );
 }

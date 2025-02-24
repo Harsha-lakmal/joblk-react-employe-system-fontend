@@ -1,0 +1,91 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form-section, .profile-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.save-btn {
+  background-color: #007BFF;
+  color: white;
+  grid-column: span 2;
+}
+
+.connect-btn {
+  background-color: #28A745;
+  color: white;
+}
+
+.message-btn {
+  background-color: #17A2B8;
+  color: white;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-card h3,
+.profile-card p {
+  color: white;
+}
+
+.upload-section {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: #ccc;
+}

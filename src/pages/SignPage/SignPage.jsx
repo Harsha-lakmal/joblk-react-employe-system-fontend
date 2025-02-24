@@ -15,6 +15,7 @@ import {
     FormControl,
     Select,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const darkTheme = createTheme({
     palette: {
@@ -30,6 +31,8 @@ const darkTheme = createTheme({
 
 const roles = ["Employee", "Trainer"];
 
+
+
 export default function SignPage() {
     const [email, setEmail] = useState("");
     const [userName, setUserName] = useState("");
@@ -37,6 +40,8 @@ export default function SignPage() {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [tandc, setTandc] = useState(false);
     const [role, setRole] = useState("");
+    const navigate = useNavigate();
+
 
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -69,6 +74,8 @@ export default function SignPage() {
 
     const handleLogin = () => {
         console.log("Redirecting to login...");
+        navigate('/signup');
+
     };
 
     return (
